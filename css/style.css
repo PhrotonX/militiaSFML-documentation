@@ -1,0 +1,24 @@
+h1 {
+	font-family: "Arial";
+	margin-left: 30px;
+	margin-top: 20px;
+}
+h2 {font-family: "Arial";}
+h3 {font-family: "Arial";}
+hr {margin-left: 30px;}
+pre {font-family: "Arial"; margin-left: 30px;}
+p {font-family: "Arial"; margin-left: 30px;}
+li {font-family: "Arial"; margin-left: 30px;}
+dd {font-family: "Arial";}
+dt {font-family: "Arial";}
+a {font-family: "Arial";}
+
+img {
+	width: 85%;
+	height: auto;
+}
+.imgDiv{
+	display: none;
+}
+
+button {margin-left: 30px;}
