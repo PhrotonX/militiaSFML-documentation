@@ -1204,6 +1204,29 @@
 			<h2>Build 774: June 30, 2022 - 19:18:24 / 19:29:01 phroton/bug-7-pause-button-flicking (developer mode)</h2>
 				<li>2nd attempt to fix <a class="tracking-id" href="https://github.com/PhrotonX/militiaSFML/issues/7">bug #7</a></li>
 				<li>Added scale to <code>m_dim</code> from default value to 255, 255, but it didn't work.</li>
+			<h2>Build 775: July 1, 2022 - 15:31:29 / 15:31:58 phroton/bug-7-pause-button-flicking (developer mode)</h2>
+				<li>Fixed a seperate issue that prevented pause button to use a click texture. Temporarily uses smallButtonClick.png texture instead of pause_click.png.</li>
+				<br><button onclick='showImage("info-775")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-775">
+					<img src="build775.png" alt="Build 775 Image."><br>
+				</div>
+			<h2>Build 776: July 1, 2022 - 16:05:58 / 16:06:30 phroton/bug-7-pause-button-flicking (developer mode)</h2>
+				<li>3rd attempt to fix <a class="tracking-id" href="https://github.com/PhrotonX/militiaSFML/issues/7">bug #7</a></li>
+				<li>Renamed hud to _hud in HarpZagot_M1.h and .cpp.</li>
+				<li>Created a new function called TakeScreenshot() in HUD class with no parameters.</li>
+				<li>Used TakeScreenshot() to capture the screen of the current level but off-white texture is captured instead of the game contents.</li>
+				<br><button onclick='showImage("info-776")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-776">
+					<img src="build776.png" alt="Build 776 Image."><br>
+				</div>
+			<h2>Build 777: July 1, 2022 - 16:18:24 / 16:18:56 phroton/bug-7-pause-button-flicking (developer mode)</h2>
+				<li>4th attempt to fix <a class="tracking-id" href="https://github.com/PhrotonX/militiaSFML/issues/7">bug #7</a></li>
+				<li>Added sf::RenderWindow& window parameter to TakeScreenshot(), but the screenshot remains white.</li>
+				<li>Same situation as build 776.</li>
+				<br><button onclick='showImage("info-777")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-777">
+					<img src="build777.png" alt="Build 777 Image."><br>
+				</div>
 		</ul>
 		
 		<script>
