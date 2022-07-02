@@ -1268,6 +1268,31 @@
 				<div class="imgDiv" id="info-779">
 					<img src="build779.png" alt="Build 779 Image."><br>
 				</div>
+			<h2>Build 780: phroton/bug-7-pause-button-flicking (developer mode)</h2>
+				<h3>July 2, 2022 - 14:39:01</h3>
+				<li>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'virtual void Phroton::HarpzagotM1::HandleInput()':|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|58|error: 'window' was not declared in this scope|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|58|note: suggested alternative: 'bind'|</li>
+				<li>||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 57 second(s)) ===|</li>
+				<li>Tried adding more parameters in TakeScreenshot() but it failed.</li>
+				<h3>July 2, 2022 - 14:41:06</h3>
+				<li>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'virtual void Phroton::HarpzagotM1::HandleInput()':|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|58|error: cannot call member function 'bool sf::Texture::create(unsigned int, unsigned int)' without object|</li>
+				<li>||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 10 second(s)) ===|</li>
+				<h3>July 2, 2022 - 14:48:39</h3>
+				<li>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'virtual void Phroton::HarpzagotM1::HandleInput()':|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|58|error: cannot call member function 'bool sf::Texture::create(unsigned int, unsigned int)' without object|</li>
+				<li>||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 18 second(s)) ===|</li>
+				<li>Tried adding dereference operator in a parameter of TakeScreenshot() but it failed.</li>
+				<h3>July 2, 2022 - 14:53:18</h3>
+				<li>I forgot to remove the dereference operator on a local variable inside HUD::TakeScreenshot().</li>
+				<li>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|</li>
+				<li>\Militia SFML\common\hud.cpp||In member function 'sf::Sprite& Phroton::HUD::TakeScreenshot(sf::RenderWindow&)':|</li>
+				<li>\Militia SFML\common\hud.cpp|267|error: 'screenshotTexture' declared as reference but not initialized|</li>
+				<li>||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 16 second(s)) ===|</li>
 		</ul>
 		
 		<script>
