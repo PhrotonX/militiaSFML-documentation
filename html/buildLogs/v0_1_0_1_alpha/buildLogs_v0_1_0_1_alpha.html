@@ -1293,6 +1293,98 @@
 				<li>\Militia SFML\common\hud.cpp||In member function 'sf::Sprite& Phroton::HUD::TakeScreenshot(sf::RenderWindow&)':|</li>
 				<li>\Militia SFML\common\hud.cpp|267|error: 'screenshotTexture' declared as reference but not initialized|</li>
 				<li>||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 16 second(s)) ===|</li>
+				<h3>July 4, 2022 - 09:25:57 / 09:26:53</h3>
+				<li>5th attempt to fix <a class="tracking-id" href="https://github.com/PhrotonX/militiaSFML/issues/7">bug #7</a></li>
+				<li>Updated TakeScreenshot() function to pass by reference.</li>
+				<li>g_bNewSession will now set to false after calling the parachute function.</li>
+				<li>Debug info for g_bNewSession has been updated to display only before calling parachute function.</li>
+				<li>Game now crashes when entering pause menu.</li>
+				<br><button onclick='showImage("info-780")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-780">
+					<img src="build780.png" alt="Build 780 Image."><br>
+				</div>
+			<h2>Build 781: phroton/bug-7-pause-button-flicking (developer mode)</h2>
+				<h3>July 4, 2022 - 09:42:53</h3>
+				<li>Got several errors after trying to pass by pointer and use &amp;window.</li>
+				<li>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|</li>
+				<li>\Militia SFML\common\hud.cpp||In member function 'sf::Sprite Phroton::HUD::TakeScreenshot(sf::RenderWindow*)':|</li>
+				<li>\Militia SFML\common\hud.cpp|269|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>\Militia SFML\common\hud.cpp|269|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>\Militia SFML\common\hud.cpp|270|error: no matching function for call to 'sf::Texture::update(sf::RenderWindow**)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|256|note: candidate: 'void sf::Texture::update(const Uint8*)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|256|note:   no known conversion for argument 1 from 'sf::RenderWindow**' to 'const Uint8*' {aka 'const unsigned char*'}|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|278|note: candidate: 'void sf::Texture::update(const Uint8*, unsigned int, unsigned int, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|278|note:   candidate expects 5 arguments, 1 provided|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|298|note: candidate: 'void sf::Texture::update(const sf::Texture&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|298|note:   no known conversion for argument 1 from 'sf::RenderWindow**' to 'const sf::Texture&'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|315|note: candidate: 'void sf::Texture::update(const sf::Texture&, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|315|note:   candidate expects 3 arguments, 1 provided|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|335|note: candidate: 'void sf::Texture::update(const sf::Image&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|335|note:   no known conversion for argument 1 from 'sf::RenderWindow**' to 'const sf::Image&'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|352|note: candidate: 'void sf::Texture::update(const sf::Image&, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|352|note:   candidate expects 3 arguments, 1 provided|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|372|note: candidate: 'void sf::Texture::update(const sf::Window&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|372|note:   no known conversion for argument 1 from 'sf::RenderWindow**' to 'const sf::Window&'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|389|note: candidate: 'void sf::Texture::update(const sf::Window&, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|389|note:   candidate expects 3 arguments, 1 provided|</li>
+				<li>\Militia SFML\common\hud.cpp|272|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>\Militia SFML\common\hud.cpp|272|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>||=== Build finished: 5 error(s), 0 warning(s) (0 minute(s), 40 second(s)) ===|</li>
+				<h3>July 4, 2022 - 09:49:01</h3>
+				<li>Removed &amp;window.</li>
+				<li>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|</li>
+				<li>\Militia SFML\common\hud.cpp||In member function 'sf::Sprite Phroton::HUD::TakeScreenshot(sf::RenderWindow*)':|</li>
+				<li>\Militia SFML\common\hud.cpp|269|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>\Militia SFML\common\hud.cpp|269|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>\Militia SFML\common\hud.cpp|270|error: no matching function for call to 'sf::Texture::update(sf::RenderWindow*&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|256|note: candidate: 'void sf::Texture::update(const Uint8*)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|256|note:   no known conversion for argument 1 from 'sf::RenderWindow*' to 'const Uint8*' {aka 'const unsigned char*'}|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|278|note: candidate: 'void sf::Texture::update(const Uint8*, unsigned int, unsigned int, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|278|note:   candidate expects 5 arguments, 1 provided|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|298|note: candidate: 'void sf::Texture::update(const sf::Texture&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|298|note:   no known conversion for argument 1 from 'sf::RenderWindow*' to 'const sf::Texture&'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|315|note: candidate: 'void sf::Texture::update(const sf::Texture&, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|315|note:   candidate expects 3 arguments, 1 provided|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|335|note: candidate: 'void sf::Texture::update(const sf::Image&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|335|note:   no known conversion for argument 1 from 'sf::RenderWindow*' to 'const sf::Image&'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|352|note: candidate: 'void sf::Texture::update(const sf::Image&, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|352|note:   candidate expects 3 arguments, 1 provided|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|372|note: candidate: 'void sf::Texture::update(const sf::Window&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|372|note:   no known conversion for argument 1 from 'sf::RenderWindow*' to 'const sf::Window&'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|389|note: candidate: 'void sf::Texture::update(const sf::Window&, unsigned int, unsigned int)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\Texture.hpp|389|note:   candidate expects 3 arguments, 1 provided|</li>
+				<li>\Militia SFML\common\hud.cpp|272|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>\Militia SFML\common\hud.cpp|272|error: request for member 'getSize' in 'window', which is of pointer type 'sf::RenderWindow*' (maybe you meant to use '->' ?)|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'virtual void Phroton::HarpzagotM1::HandleInput()':|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|59|error: no matching function for call to 'Phroton::HUD::TakeScreenshot(sf::RenderWindow&)'|</li>
+				<li>\Militia SFML\common\hud.h|48|note: candidate: 'sf::Sprite Phroton::HUD::TakeScreenshot(sf::RenderWindow*)'|</li>
+				<li>\Militia SFML\common\hud.h|48|note:   no known conversion for argument 1 from 'sf::RenderWindow' to 'sf::RenderWindow*'|</li>
+				<li>||=== Build finished: 6 error(s), 0 warning(s) (0 minute(s), 27 second(s)) ===|</li>
+				<h3>July 4, 2022 - 10:01:11</h3>
+				<li>Removed pass by reference for TakeScreenshot().</li>
+				<li>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|</li>
+				<li>\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|59|error: use of deleted function 'sf::RenderWindow::RenderWindow(const sf::RenderWindow&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\RenderWindow.hpp|44|note: 'sf::RenderWindow::RenderWindow(const sf::RenderWindow&)' is implicitly deleted because the default definition would be ill-formed:|</li>
+				<li>C:\sfml\include\SFML\Graphics\RenderWindow.hpp|44|error: use of deleted function 'sf::Window::Window(const sf::Window&)'|</li>
+				<li>C:\sfml\include\SFML\Window\Window.hpp|58|note: 'sf::Window::Window(const sf::Window&)' is implicitly deleted because the default definition would be ill-formed:|</li>
+				<li>C:\sfml\include\SFML\Window\Window.hpp|58|error: 'sf::NonCopyable::NonCopyable(const sf::NonCopyable&)' is private within this context|</li>
+				<li>C:\sfml\include\SFML\System\NonCopyable.hpp|77|note: declared private here|</li>
+				<li>C:\sfml\include\SFML\Graphics\RenderWindow.hpp|44|error: use of deleted function 'sf::RenderTarget::RenderTarget(const sf::RenderTarget&)'|</li>
+				<li>C:\sfml\include\SFML\Graphics\RenderTarget.hpp|52|note: 'sf::RenderTarget::RenderTarget(const sf::RenderTarget&)' is implicitly deleted because the default definition would be ill-formed:|</li>
+				<li>C:\sfml\include\SFML\Graphics\RenderTarget.hpp|52|error: 'sf::NonCopyable::NonCopyable(const sf::NonCopyable&)' is private within this context|</li>
+				<li>C:\sfml\include\SFML\System\NonCopyable.hpp|77|note: declared private here|</li>
+				<li>\Militia SFML\common\hud.h|48|note:   initializing argument 1 of 'sf::Sprite Phroton::HUD::TakeScreenshot(sf::RenderWindow)'|</li>
+				<li>||=== Build finished: 5 error(s), 0 warning(s) (0 minute(s), 28 second(s)) ===|</li>
+				<h3>July 4, 2022 - 09:48:19 / 10:18:23</h3>
+				<li>6th attempt to fix <a class="tracking-id" href="https://github.com/PhrotonX/militiaSFML/issues/7">bug #7</a></li>
+				<li>Successfully compiled the code.</li>
+				<li>HUD is still returning a white screen instead of the background. Same situation as build 776.</li>
+				<li>TakeScreenshot() will now pass by reference and return by reference with static variable.</li>
+				<li>It seems that the game just call the HarpzagotM1 class even with isReplacing boolean set to false.</li>
+				<br><button onclick='showImage("info-781")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-781">
+					<img src="build781.png" alt="Build 781 Image."><br>
+				</div>
 		</ul>
 		
 		<script>
