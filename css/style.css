@@ -6,7 +6,12 @@ h1 {
 h2 {font-family: "Arial";}
 h3 {font-family: "Arial";}
 hr {margin-left: 30px;}
-pre {font-family: "Arial"; margin-left: 30px;}
+pre{
+	font-size: 16px;
+	font-family: "Arial";
+	margin-left: 30px;
+	word-wrap: break-word;
+}
 p {font-family: "Arial"; margin-left: 30px;}
 li {font-family: "Arial"; margin-left: 30px;}
 dd {font-family: "Arial";}

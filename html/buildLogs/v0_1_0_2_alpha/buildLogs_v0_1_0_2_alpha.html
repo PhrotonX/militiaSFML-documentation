@@ -12,7 +12,258 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 5, 2022 13:54:20</p>
+		<p>Updated as of July 6, 2022 16:25:42</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
+		<ul>
+			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
+				<h3>July 6, 2022 - 14:39:42</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|65|error: expected ';' before 'std'|
+\Militia SFML\engine\resource-engine.cpp|68|error: 'itr' was not declared in this scope|
+\Militia SFML\engine\resource-engine.cpp|68|note: suggested alternative: 'itoa'|
+||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 32 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 14:40:58</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|69|error: no match for 'operator<<' (operand types are 'std::basic_ostream<code><char></code>' and 'sf::Texture')|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|108|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|108|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::basic_ostream<code><char></code>::__ostream_type& (*)(std::basic_ostream<code><char></code>::__ostream_type&)' {aka 'std::basic_ostream<code><char></code>& (*)(std::basic_ostream<code><char></code>&)'}|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|117|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|117|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::basic_ostream<code><char></code>::__ios_type& (*)(std::basic_ostream<code><char></code>::__ios_type&)' {aka 'std::basic_ios<code><char></code>& (*)(std::basic_ios<code><char></code>&)'}|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|127|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|127|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::ios_base& (*)(std::ios_base&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|166|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|166|note:   no known conversion for argument 1 from 'sf::Texture' to 'long int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|170|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|170|note:   no known conversion for argument 1 from 'sf::Texture' to 'long unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|174|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|174|note:   no known conversion for argument 1 from 'sf::Texture' to 'bool'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|91|note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|91|note:   no known conversion for argument 1 from 'sf::Texture' to 'short int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|181|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|181|note:   no known conversion for argument 1 from 'sf::Texture' to 'short unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|105|note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|105|note:   no known conversion for argument 1 from 'sf::Texture' to 'int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|192|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|192|note:   no known conversion for argument 1 from 'sf::Texture' to 'unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|201|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|201|note:   no known conversion for argument 1 from 'sf::Texture' to 'long long int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|205|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|205|note:   no known conversion for argument 1 from 'sf::Texture' to 'long long unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|220|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|220|note:   no known conversion for argument 1 from 'sf::Texture' to 'double'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|224|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|224|note:   no known conversion for argument 1 from 'sf::Texture' to 'float'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|232|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|232|note:   no known conversion for argument 1 from 'sf::Texture' to 'long double'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|245|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|245|note:   no known conversion for argument 1 from 'sf::Texture' to 'const void*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|119|note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|119|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::basic_ostream<code><char></code>::__streambuf_type*' {aka 'std::basic_streambuf<code><char></code>*'}|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\string_view|545|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\string_view|545|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   'sf::Texture' is not derived from 'std::basic_string_view<_CharT, _Traits>'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|6284|note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|6284|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   'sf::Texture' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\system_error|217|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\system_error|217|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const std::error_code&'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|497|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|497|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   deduced conflicting types for parameter '_CharT' ('char' and 'sf::Texture')|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|502|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|502|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|508|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|508|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|514|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|514|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'signed char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|519|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|519|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'unsigned char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|539|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|539|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   mismatched types 'const _CharT*' and 'sf::Texture'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|321|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|321|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|556|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|556|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|569|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|569|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const signed char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|574|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|574|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const unsigned char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|note: candidate: 'template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|69|required from here|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|error: no type named 'type' in 'struct std::enable_if<false, std::basic_ostream<code><char></code>&>'|
+||=== Build finished: 2 error(s), 1 warning(s) (0 minute(s), 18 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 14:46:19</h3>
+				<li>Same error as above.</li>
+				<h3>July 6, 2022 - 14:52:18</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.h|25|error: declaration of 'operator<<' as non-function|
+\Militia SFML\engine\resource-engine.h|25|error: expected ';' at end of member declaration|
+\Militia SFML\engine\resource-engine.h|25|error: expected ')' before '&' token|
+\Militia SFML\engine\resource-engine.h|25|error: declaration of 'operator<<' as non-function|
+\Militia SFML\engine\resource-engine.h|25|error: expected ';' at end of member declaration|
+\Militia SFML\engine\resource-engine.h|25|error: expected ')' before '&' token|
+\Militia SFML\engine\resource-engine.h|25|error: declaration of 'operator<<' as non-function|
+\Militia SFML\engine\resource-engine.h|25|error: expected ';' at end of member declaration|
+\Militia SFML\engine\resource-engine.h|25|error: expected ')' before '&' token|
+\Militia SFML\engine\resource-engine.h|25|error: declaration of 'operator<<' as non-function|
+\Militia SFML\engine\resource-engine.h|25|error: expected ';' at end of member declaration|
+\Militia SFML\engine\resource-engine.h|25|error: expected ')' before '&' token|
+||=== Build failed: 12 error(s), 0 warning(s) (0 minute(s), 18 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 14:55:34</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+C\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+C\Militia SFML\engine\resource-engine.cpp|70|error: no match for 'operator<<' (operand types are 'std::basic_ostream<code><char></code>' and 'sf::Texture')|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|108|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|108|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::basic_ostream<code><char></code>::__ostream_type& (*)(std::basic_ostream<code><char></code>::__ostream_type&)' {aka 'std::basic_ostream<code><char></code>& (*)(std::basic_ostream<code><char></code>&)'}|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|117|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|117|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::basic_ostream<code><char></code>::__ios_type& (*)(std::basic_ostream<code><char></code>::__ios_type&)' {aka 'std::basic_ios<code><char></code>& (*)(std::basic_ios<code><char></code>&)'}|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|127|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|127|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::ios_base& (*)(std::ios_base&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|166|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|166|note:   no known conversion for argument 1 from 'sf::Texture' to 'long int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|170|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|170|note:   no known conversion for argument 1 from 'sf::Texture' to 'long unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|174|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|174|note:   no known conversion for argument 1 from 'sf::Texture' to 'bool'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|91|note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|91|note:   no known conversion for argument 1 from 'sf::Texture' to 'short int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|181|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|181|note:   no known conversion for argument 1 from 'sf::Texture' to 'short unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|105|note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|105|note:   no known conversion for argument 1 from 'sf::Texture' to 'int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|192|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|192|note:   no known conversion for argument 1 from 'sf::Texture' to 'unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|201|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|201|note:   no known conversion for argument 1 from 'sf::Texture' to 'long long int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|205|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|205|note:   no known conversion for argument 1 from 'sf::Texture' to 'long long unsigned int'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|220|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|220|note:   no known conversion for argument 1 from 'sf::Texture' to 'double'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|224|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|224|note:   no known conversion for argument 1 from 'sf::Texture' to 'float'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|232|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|232|note:   no known conversion for argument 1 from 'sf::Texture' to 'long double'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|245|note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|245|note:   no known conversion for argument 1 from 'sf::Texture' to 'const void*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|119|note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<code><char></code>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<code><char></code>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|119|note:   no known conversion for argument 1 from 'sf::Texture' to 'std::basic_ostream<code><char></code>::__streambuf_type*' {aka 'std::basic_streambuf<code><char></code>*'}|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\string_view|545|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\string_view|545|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   'sf::Texture' is not derived from 'std::basic_string_view<_CharT, _Traits>'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|6284|note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|6284|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   'sf::Texture' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\system_error|217|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\system_error|217|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const std::error_code&'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|497|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|497|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   deduced conflicting types for parameter '_CharT' ('char' and 'sf::Texture')|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|502|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|502|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|508|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|508|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|514|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|514|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'signed char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|519|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|519|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'unsigned char'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|539|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|539|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   mismatched types 'const _CharT*' and 'sf::Texture'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|321|note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\ostream.tcc|321|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|556|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|556|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|569|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|569|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const signed char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|574|note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|574|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture> >::operator->()->std::pair<const std::__cxx11::basic_string<code><char></code>, sf::Texture>::second' (type 'sf::Texture') to type 'const unsigned char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|note: candidate: 'template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|note:   template argument deduction/substitution failed:|
+C\Militia SFML\engine\resource-engine.cpp|70|required from here|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|error: no type named 'type' in 'struct std::enable_if<false, std::basic_ostream<code><char></code>&>'|
+||=== Build finished: 2 error(s), 1 warning(s) (0 minute(s), 37 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 15:03:33</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|70|error: cannot convert 'const std::__cxx11::basic_string<code><char></code>' to 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\stdio.h|345|note:   initializing argument 1 of 'int printf(const char*, ...)'|
+\Militia SFML\engine\resource-engine.cpp|72|error: cannot convert 'sf::Texture' to 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\stdio.h|345|note:   initializing argument 1 of 'int printf(const char*, ...)'|
+||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 17 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 15:53:34</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|70|error: expected ',' or ';' before 'const'|
+\Militia SFML\engine\resource-engine.cpp|71|error: conversion from 'sf::Texture' to non-scalar type 'std::__cxx11::string' {aka 'std::__cxx11::basic_string<char>'} requested|
+\Militia SFML\engine\resource-engine.cpp|74|error: 'pszItr1st' was not declared in this scope|
+\Militia SFML\engine\resource-engine.cpp|76|error: 'pszItr2nd' was not declared in this scope|
+||=== Build finished: 4 error(s), 0 warning(s) (0 minute(s), 15 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 15:56:36</h3>
+				<pre>\Militia SFML\engine\resource-engine.cpp|71|error: conversion from 'sf::Texture' to non-scalar type 'std::__cxx11::string' {aka 'std::__cxx11::basic_string<char>'} requested|</pre>
+				<h3>July 6, 2022 - 16:01:18</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|74|error: 'name' was not declared in this scope|
+\Militia SFML\engine\resource-engine.cpp|74|note: suggested alternative: 'tzname'|
+||=== Build failed: 1 error(s), 0 warning(s) (0 minute(s), 4 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 16:02:29</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|74|error: cannot convert 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::mapped_type' {aka 'sf::Texture'} to 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\stdio.h|345|note:   initializing argument 1 of 'int printf(const char*, ...)'|
+||=== Build failed: 1 error(s), 0 warning(s) (0 minute(s), 3 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 16:04:29</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|71|error: conversion from 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::mapped_type' {aka 'sf::Texture'} to non-scalar type 'std::__cxx11::string' {aka 'std::__cxx11::basic_string<char>'} requested|
+||=== Build failed: 1 error(s), 0 warning(s) (0 minute(s), 4 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 16:07:34</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTexture()':|
+\Militia SFML\engine\resource-engine.cpp|77|error: invalid conversion from 'unsigned int' to 'const char*' [-fpermissive]|
+C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\stdio.h|345|note:   initializing argument 1 of 'int printf(const char*, ...)'|
+||=== Build failed: 1 error(s), 0 warning(s) (0 minute(s), 4 second(s)) ===|
+</pre>
+				<h3>July 6, 2022 - 14:55:36 / 16:09:15</h3>
+				<li>Added more debug info that lists contents of m_texture for easier debugging.</li>
+				<li>Needs more change because I do not like the info displayed on Element column.</li>
+				<li>The debug info displays after entering HarpzagotM1, which is temporary.</li>
+				<li><code>int main()</code> has been updated to <code>int main(int argc, char* argv[], char* envp[])</code>, but command input is not implemented.</li>
+				<br><button onclick='showImage("info-786")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-786">
+					<img src="build786.png" alt="Build 786 Image."><br>
+				</div>
+		</ul>
 	</body>
 </html>
