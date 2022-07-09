@@ -276,6 +276,128 @@ C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\stdio.h|345|note:  
 					<img src="build788_1.png" alt="First Build 788 Image."><br>
 					<img src="build788_2.png" alt="Second Build 788 Image."><br>
 				</div>
+			<h2>Build 789: phroton/feature/list-map-input-engine (developer mode)</h2>
+				<h3>July 9, 2022 - 12:13:49</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListAudios()':|
+\Militia SFML\engine\resource-engine.cpp|68|error: no match for 'operator=' (operand types are 'std::map<std::__cxx11::basic_string<char>, sf::SoundBuffer>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >'} and 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Texture> >'})|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note: candidate: 'constexpr std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >& std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >::operator=(const std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note:   no known conversion for argument 1 from 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Texture> >'} to 'const std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >&'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note: candidate: 'constexpr std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >& std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >::operator=(std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >&&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note:   no known conversion for argument 1 from 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Texture> >'} to 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::SoundBuffer> >&&'|
+\Militia SFML\engine\resource-engine.cpp|75|error: 'unsigned int sf::SoundBuffer::m_buffer' is private within this context|
+C:\sfml\include\SFML\Audio\SoundBuffer.hpp|275|note: declared private here|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListFonts()':|
+\Militia SFML\engine\resource-engine.cpp|83|error: no match for 'operator=' (operand types are 'std::map<std::__cxx11::basic_string<char>, sf::Font>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >'} and 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Texture> >'})|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note: candidate: 'constexpr std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >& std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >::operator=(const std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note:   no known conversion for argument 1 from 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Texture> >'} to 'const std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >&'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note: candidate: 'constexpr std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >& std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >::operator=(std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >&&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_tree.h|256|note:   no known conversion for argument 1 from 'std::map<std::__cxx11::basic_string<char>, sf::Texture>::iterator' {aka 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Texture> >'} to 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, sf::Font> >&&'|
+\Militia SFML\engine\resource-engine.cpp|90|error: 'sf::Font::Info sf::Font::m_info' is private within this context|
+C:\sfml\include\SFML\Graphics\Font.hpp|354|note: declared private here|
+\Militia SFML\engine\resource-engine.cpp|90|error: no matching function for call to 'std::__cxx11::basic_string<char>::basic_string(sf::Font::Info&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|639|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::__sv_wrapper, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|639|note:   candidate expects 2 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|629|note: candidate: 'template<class _Tp, class> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Tp&, const _Alloc&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|629|note:   template argument deduction/substitution failed:|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|618|note: candidate: 'template<class _Tp, class> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Tp&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|618|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|90|note:   candidate expects 4 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|604|note: candidate: 'template<class _InputIterator, class> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|604|note:   template argument deduction/substitution failed:|
+\Militia SFML\engine\resource-engine.cpp|90|note:   candidate expects 3 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|566|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|566|note:   candidate expects 2 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|562|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|562|note:   candidate expects 2 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|558|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|558|note:   no known conversion for argument 1 from 'sf::Font::Info' to 'std::initializer_list<char>'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|531|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|531|note:   no known conversion for argument 1 from 'sf::Font::Info' to 'std::__cxx11::basic_string<char>&&'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|519|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long long unsigned int]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|519|note:   candidate expects 3 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|509|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|509|note:   no known conversion for argument 1 from 'sf::Font::Info' to 'const char*'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|499|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long long unsigned int]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|499|note:   candidate expects 3 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|481|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long long unsigned int]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|481|note:   candidate expects 4 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|465|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long long unsigned int]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|465|note:   candidate expects 3 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|450|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long long unsigned int]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|450|note:   candidate expects 3 arguments, 1 provided|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|437|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|437|note:   no known conversion for argument 1 from 'sf::Font::Info' to 'const std::__cxx11::basic_string<char>&'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|429|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|429|note:   no known conversion for argument 1 from 'sf::Font::Info' to 'const std::allocator<char>&'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|420|note: candidate: 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|420|note:   candidate expects 0 arguments, 1 provided|
+\Militia SFML\engine\resource-engine.cpp||In member function 'void Dzergero::ResourceEngine::ListTextures()':|
+\Militia SFML\engine\resource-engine.cpp|107|error: 'unsigned int sf::Texture::m_texture' is private within this context|
+C:\sfml\include\SFML\Graphics\Texture.hpp|621|note: declared private here|
+||=== Build finished: 6 error(s), 0 warning(s) (0 minute(s), 47 second(s)) ===|
+</pre>
+				<h3>July 9, 2022 - 12:13:50 / 12:41:48</h3>
+				<li>Map for Audio and Font can now be listed on debug console through ListAudios() and ListFonts().</li>
+				<li>Removed prototype code for console input.</li>
+				<li>Size of m_texture is now displayed instead of it's maximum size.</li>
+				<li>Renamed ListTexture() to ListTextures().</li>
+				<br><button onclick='showImage("info-789")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-789">
+					<img src="build789.png" alt="Build 789 Image."><br>
+				</div>
+			<h2>Build 790: phroton/feature/list-map-input-engine (developer mode)</h2>
+				<h3>July 9, 2022 - 17:13:54</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\main.cpp||In function 'int main(int, char**, char**)':|
+\Militia SFML\main.cpp|22|error: expected ';' before 'std'|
+\Militia SFML\main.cpp|41|error: 'index' was not declared in this scope|
+||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 51 second(s)) ===|
+</pre>
+				<h3>July 9, 2022 - 17:15:12 / 17:15:29</h3>
+				<li>Tried adding another prototype code for command line input, but it failed. The game did not even load.</li>
+				<br><button onclick='showImage("info-790")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-790">
+					<img src="build790.png" alt="Build 790 Image."><br>
+				</div>
+			<h2>Build 791: July 9, 2022 - 17:27:55 / 17:28:24 phroton/feature/list-map-input-engine (developer mode)</h2>
+				<li>Made some changes in the prototype code for command input, but the code only runs after the game has exited.</li>
+				<br><button onclick='showImage("info-791")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-791">
+					<img src="build791.png" alt="Build 791 Image."><br>
+				</div>
+			<h2>Build 792: phroton/feature/list-map-input-engine (developer mode)</h2>
+				<h3>July 9, 2022 - 17:53:33</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\debug.h|9|fatal error: definitions/GAMEINFO.h: No such file or directory|
+\Militia SFML\common\debug.h|9|fatal error: definitions/GAMEINFO.h: No such file or directory|
+||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 13 second(s)) ===|
+</pre>
+				<h3>July 9, 2022 - 17:54:45</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\debug.h|17|fatal error: common/game-data.h: No such file or directory|
+\Militia SFML\common\debug.h|17|fatal error: common/game-data.h: No such file or directory|
+\Militia SFML\common\debug.h|17|fatal error: common/game-data.h: No such file or directory|
+||=== Build finished: 3 error(s), 0 warning(s) (0 minute(s), 11 second(s)) ===|
+</pre>
+				<h3>July 9, 2022 - 17:56:03</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\main.cpp||In function 'int main(int, char**, char**)':|
+\Militia SFML\main.cpp|33|error: 'Debug' was not declared in this scope|
+\Militia SFML\main.cpp|33|note: suggested alternative:|
+\Militia SFML\common\debug.h|21|note:   'Phroton::Debug'|
+\Militia SFML\main.cpp|34|error: 'debug' was not declared in this scope|
+\Militia SFML\main.cpp|34|note: suggested alternative: 'setbuf'|
+||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 47 second(s)) ===|
+</pre>
+				<h3>July 9, 2022 - 17:59:45</h3>
+				<li>Moved prototype code for console input to Debug() constructor.</li>
+				<li>The change caused pause when trying to open the game when an input has been not taken.</li>
+				<br><button onclick='showImage("info-792")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-792">
+					<img src="build792_1.png" alt="First Build 791 Image."><br>
+					<img src="build792_2.png" alt="Second Build 791 Image."><br>
+				</div>
 		</ul>
 	</body>
 </html>
