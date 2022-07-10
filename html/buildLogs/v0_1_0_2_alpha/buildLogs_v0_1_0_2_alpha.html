@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 10, 2022 18:58:44</p>
+		<p>Updated as of July 10, 2022 19:02:05</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -400,6 +400,7 @@ C:\sfml\include\SFML\Graphics\Texture.hpp|621|note: declared private here|
 				</div>
 			<h2>Build 793: phroton/feature/list-map-input-engine (developer mode)</h2>
 				<h3>July 10, 2022 - 17:17:46</h3>
+				<li>Added dependency: ConsoleLogger.h</li>
 				<li>Tried using an external library called ConsoleLogger.h.</li>
 				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
 \Militia SFML\main.cpp||In function 'int main(int, char**, char**)':|
@@ -409,6 +410,7 @@ C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\wincon.h|255|note: 
 </pre>
 				<h3>July 10, 2022 - 17:19:08</h3>
 				<li>Failed to compile the game while using ConsoleLogger.h.</li>
+				<li>Removed dependency: ConsoleLogger.h</li>
 				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
 obj\main.o:main.cpp:(.text.startup+0x2b3)||undefined reference to `CConsoleLoggerEx::CConsoleLoggerEx()'|
 obj\main.o:main.cpp:(.text.startup+0x2dd)||undefined reference to `CConsoleLogger::Create(char const*, int, int, char const*, char const*)'|
