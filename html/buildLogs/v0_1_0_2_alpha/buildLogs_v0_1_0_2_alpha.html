@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 6, 2022 16:25:42</p>
+		<p>Updated as of July 10, 2022 18:58:44</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -390,13 +390,53 @@ C:\sfml\include\SFML\Graphics\Texture.hpp|621|note: declared private here|
 \Militia SFML\main.cpp|34|note: suggested alternative: 'setbuf'|
 ||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 47 second(s)) ===|
 </pre>
-				<h3>July 9, 2022 - 17:59:45</h3>
+				<h3>July 9, 2022 - 17:59:16 / 17:59:45</h3>
 				<li>Moved prototype code for console input to Debug() constructor.</li>
 				<li>The change caused pause when trying to open the game when an input has been not taken.</li>
 				<br><button onclick='showImage("info-792")'>Show Image</button><br><br>
 				<div class="imgDiv" id="info-792">
-					<img src="build792_1.png" alt="First Build 791 Image."><br>
-					<img src="build792_2.png" alt="Second Build 791 Image."><br>
+					<img src="build792_1.png" alt="First Build 792 Image."><br>
+					<img src="build792_2.png" alt="Second Build 792 Image."><br>
+				</div>
+			<h2>Build 793: phroton/feature/list-map-input-engine (developer mode)</h2>
+				<h3>July 10, 2022 - 17:17:46</h3>
+				<li>Tried using an external library called ConsoleLogger.h.</li>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\main.cpp||In function 'int main(int, char**, char**)':|
+\Militia SFML\main.cpp|18|error: cannot convert 'const wchar_t*' to 'LPCSTR' {aka 'const char*'}|
+C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\wincon.h|255|note:   initializing argument 1 of 'WINBOOL SetConsoleTitleA(LPCSTR)'|
+||=== Build finished: 1 error(s), 0 warning(s) (1 minute(s), 26 second(s)) ===|
+</pre>
+				<h3>July 10, 2022 - 17:19:08</h3>
+				<li>Failed to compile the game while using ConsoleLogger.h.</li>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+obj\main.o:main.cpp:(.text.startup+0x2b3)||undefined reference to `CConsoleLoggerEx::CConsoleLoggerEx()'|
+obj\main.o:main.cpp:(.text.startup+0x2dd)||undefined reference to `CConsoleLogger::Create(char const*, int, int, char const*, char const*)'|
+obj\main.o:main.cpp:(.text.startup+0x2ff)||undefined reference to `CConsoleLogger::printf(char const*, ...)'|
+obj\main.o:main.cpp:(.text.startup+0x39f)||undefined reference to `CConsoleLogger::~CConsoleLogger()'|
+obj\main.o:main.cpp:(.text.startup+0x438)||undefined reference to `CConsoleLogger::~CConsoleLogger()'|
+obj\main.o:main.cpp:(.rdata$.refptr._ZTV16CConsoleLoggerEx[.refptr._ZTV16CConsoleLoggerEx]+0x0)||undefined reference to `vtable for CConsoleLoggerEx'|
+||error: ld returned 1 exit status|
+||=== Build failed: 7 error(s), 0 warning(s) (0 minute(s), 21 second(s)) ===|
+</pre>
+				<h3>July 10, 2022 - 17:24:30 / 17:24:46</h3>
+				<li>Added title to console window: "Militia SFML Debug Console"</li>
+				<li>Disabled prototype code for console input because it freezes the game.</li>
+				<li>Moved prototype code for console input to developer mode.</li>
+				<li>Updated version bar to show v0.1.0.2 alpha instead of v0.1.0.1 alpha, but spacing issue occurs between the version and build number.</li>
+				<br><button onclick='showImage("info-793")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-793">
+					<img src="build793.png" alt="Build 793 Image."><br>
+				</div>
+			<h2>Build 794: July 10, 2022 - 18:11:34 / 18:12:09 phroton/feature/list-map-input-engine -> dev (developer mode)</h2>
+				<li>Added more spacing between version and build number in version bar.</li>
+				<li>List maps has been moved to developer mode.</li>
+				<li>A sudden freeze has occured while entering HarpzagotM1.</li>
+				<br><button onclick='showImage("info-794")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-794">
+					<img src="build794_1.png" alt="First Build 794 Image."><br>
+					<img src="build794_2.png" alt="Second Build 794 Image."><br>
+					<img src="build794_3.png" alt="Third Build 794 Image."><br>
 				</div>
 		</ul>
 	</body>
