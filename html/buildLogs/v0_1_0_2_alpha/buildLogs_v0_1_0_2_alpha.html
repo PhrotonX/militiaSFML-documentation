@@ -450,6 +450,152 @@ obj\main.o:main.cpp:(.rdata$.refptr._ZTV16CConsoleLoggerEx[.refptr._ZTV16CConsol
 			<h2>Build 796: phroton/feature-46/gui-layering (developer mode)</h2>
 				<h3>July 11, 2022 - 17:40 to 18:40</h3>
 				<li>Started thinking about using vectors instead of having seperate objects per header file.</li>
+				<h3>July 12, 2022 - 10:55 to 11:55</h3>
+				<li>Started separating HarpzagotM1 and it's HUD by moving some code to GUI Class.</li>
+				<h3>July 12, 2022 - 11:25:21</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.cpp||In member function 'void Phroton::GUI::GameHUD(uint_fast8_t)':|
+\Militia SFML\common\gui.cpp|45|error: 'player' was not declared in this scope|
+\Militia SFML\common\gui.cpp|45|note: suggested alternative: 'slider'|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::HandleInput()':|
+\Militia SFML\common\gui.cpp|308|error: expected primary-expression before '(' token|
+\Militia SFML\common\gui.cpp|308|error: expected type-specifier|
+||=== Build finished: 3 error(s), 0 warning(s) (0 minute(s), 30 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 11:49:29</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.h|65|error: 'Entities' does not name a type|
+\Militia SFML\common\gui.cpp||In constructor 'Phroton::GUI::GUI(Dzergero::GameEngineRef)':|
+\Militia SFML\common\gui.cpp|8|error: '_player' was not declared in this scope|
+\Militia SFML\common\gui.cpp|8|error: expected type-specifier before 'Entities'|
+\Militia SFML\common\gui.cpp||In member function 'void Phroton::GUI::GameHUD(uint_fast8_t)':|
+\Militia SFML\common\gui.cpp|46|error: '_player' was not declared in this scope|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::HandleInput()':|
+\Militia SFML\common\gui.cpp|309|error: expected primary-expression before '(' token|
+\Militia SFML\common\gui.cpp|309|error: expected type-specifier|
+\Militia SFML\common\gui.h|65|error: 'Entities' does not name a type|
+\Militia SFML\common\gui.h|65|error: 'Entities' does not name a type|
+||=== Build finished: 8 error(s), 0 warning(s) (0 minute(s), 26 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 11:32:00</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'virtual void Phroton::HarpzagotM1::Init()':|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|12|error: 'player' was not declared in this scope|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'virtual void Phroton::HarpzagotM1::Update(float)':|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|42|error: 'player' was not declared in this scope|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'virtual void Phroton::HarpzagotM1::Draw(float)':|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|48|error: 'player' was not declared in this scope|
+||=== Build finished: 12 error(s), 0 warning(s) (0 minute(s), 21 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 11:40:42</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+||=== Build failed: 10 error(s), 0 warning(s) (0 minute(s), 18 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 11:42:56</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+||=== Build failed: 13 error(s), 0 warning(s) (0 minute(s), 16 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 11:45:37</h3>
+				<li>Compilation errors decreased after declaring GUI class in game-data.h</li>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|27|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|23|error: 'GUI' does not name a type; did you mean 'GUID'?|
+||=== Build finished: 4 error(s), 0 warning(s) (0 minute(s), 19 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 11:53:47</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\pause.h|9|fatal error: ../game-data.h: No such file or directory|
+\Militia SFML\common\pause.h|9|fatal error: ../game-data.h: No such file or directory|
+\Militia SFML\common\pause.h|9|fatal error: ../game-data.h: No such file or directory|
+\Militia SFML\common\pause.h|9|fatal error: ../game-data.h: No such file or directory|
+||=== Build failed: 4 error(s), 0 warning(s) (0 minute(s), 4 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 11:55:00</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\pause.h|25|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|28|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|25|error: 'GUI' does not name a type; did you mean 'GUID'?|
+||=== Build finished: 5 error(s), 0 warning(s) (0 minute(s), 18 second(s)) ===|
+</pre>
+				<h3>July 12, 2022 - 15:50 to </h3>
+				<li>Continued separating HarpzagotM1 and it's HUD by moving some code to GUI Class.</li>
+				<h3>July 12, 2022 - 15:53:43</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\pause.cpp||In constructor 'Phroton::Pause::Pause(Dzergero::GameEngineRef, sf::Sprite)':|
+\Militia SFML\common\pause.cpp|5|error: no matching function for call to 'Phroton::GUI::GUI()'|
+\Militia SFML\common\gui.h|24|note: candidate: 'Phroton::GUI::GUI(Dzergero::GameEngineRef)'|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|28|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|16|error: expected class-name before '{' token|
+\Militia SFML\menu\map-options.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\game-selector.h|28|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\menu\main-menu-screen.h|30|error: 'GUI' does not name a type; did you mean 'GUID'?|
+\Militia SFML\common\pause.h|16|error: expected class-name before '{' token|
+\Militia SFML\common\gui.h|24|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\gui.h|21|note: candidate: 'Phroton::GUI::GUI(const Phroton::GUI&)'|
+\Militia SFML\common\gui.h|21|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\gui.h|21|note: candidate: 'Phroton::GUI::GUI(Phroton::GUI&&)'|
+\Militia SFML\common\gui.h|21|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\pause.h|16|error: expected class-name before '{' token|
+||=== Build failed: 10 error(s), 0 warning(s) (0 minute(s), 24 second(s)) ===|
+</pre>
+			<h3>July 12, 2022 - 16:01:13</h3>
+			<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\menu\map-options.cpp||In member function 'virtual void Phroton::MapOptions::HandleInput()':|
+\Militia SFML\menu\map-options.cpp|79|error: no matching function for call to 'Phroton::GUI::GUI()'|
+\Militia SFML\common\gui.h|24|note: candidate: 'Phroton::GUI::GUI(Dzergero::GameEngineRef)'|
+\Militia SFML\common\gui.h|24|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\gui.h|21|note: candidate: 'Phroton::GUI::GUI(const Phroton::GUI&)'|
+\Militia SFML\common\gui.h|21|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\gui.h|21|note: candidate: 'Phroton::GUI::GUI(Phroton::GUI&&)'|
+\Militia SFML\common\gui.h|21|note:   candidate expects 1 argument, 0 provided|
+||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 49 second(s)) ===|
+</pre>
+			<h3>July 12, 2022 - 16:00:49 / 16:02:20</h3>
+			<li>Separated HUD and Map level.</li>
+			<li>The background looks black because layering hasn't implemented yet.</li>
+			<br><button onclick='showImage("info-796")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-796">
+					<img src="build796_1.png" alt="First Build 796 Image."><br>
+					<img src="build796_2.png" alt="Second Build 796 Image."><br>
+				</div>
 		</ul>
 	</body>
 </html>
