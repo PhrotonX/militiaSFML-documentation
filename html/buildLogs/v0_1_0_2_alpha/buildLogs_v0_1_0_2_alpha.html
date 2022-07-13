@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 11, 2022 18:41:10</p>
+		<p>Updated as of July 13, 2022 19:00:50</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -623,6 +623,33 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 </pre>
 				<h3>July 13, 2022 - 10:13:33</h3>
 				<li>Permanently deleted layer-engine.h and .cpp.</li>
+				<h3>July 13, 2022 - 18:36:03</h3>
+				<li>Added LevelEngine Class for DzergeroEngine.</li>
+				<h3>July 13, 2022 - 18:41</h3>
+				<li>Renamed LevelEngine to Levels Class.</li>
+				<li>Moved Levels from DzergeroEngine to /common folder.</li>
+				<h3>July 13, 2022 - 18:58:43</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::Init()':|
+\Militia SFML\common\gui.cpp|277|error: no matching function for call to 'Phroton::Levels::Levels()'|
+\Militia SFML\common\levels.h|17|note: candidate: 'Phroton::Levels::Levels(Dzergero::GameEngineRef)'|
+\Militia SFML\common\levels.h|17|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\levels.h|14|note: candidate: 'Phroton::Levels::Levels(const Phroton::Levels&)'|
+\Militia SFML\common\levels.h|14|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\levels.h|14|note: candidate: 'Phroton::Levels::Levels(Phroton::Levels&&)'|
+\Militia SFML\common\levels.h|14|note:   candidate expects 1 argument, 0 provided|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::Update(float)':|
+\Militia SFML\common\gui.cpp|315|error: invalid use of 'Phroton::Levels::Levels'|
+\Militia SFML\common\gui.h|69|error: 'Levels' does not name a type|
+||=== Build failed: 3 error(s), 0 warning(s) (0 minute(s), 28 second(s)) ===|
+</pre>
+				<h3>July 13, 2022 - 18:59:44</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.h|69|error: 'Levels' does not name a type|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::Update(float)':|
+\Militia SFML\common\gui.cpp|315|error: invalid use of 'Phroton::Levels::Levels'|
+||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 16 second(s)) ===|
+</pre>
 		</ul>
 	</body>
 </html>
