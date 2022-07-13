@@ -596,6 +596,33 @@ obj\main.o:main.cpp:(.rdata$.refptr._ZTV16CConsoleLoggerEx[.refptr._ZTV16CConsol
 					<img src="build796_1.png" alt="First Build 796 Image."><br>
 					<img src="build796_2.png" alt="Second Build 796 Image."><br>
 				</div>
+			<h2>Build 797: phroton/feature-46/gui-layering (developer mode)</h2>
+				<h3>July 13, 2022 - 08:22 to 9:00, 10:00 to </h3>
+				<li>Started working on HUD and Map layering.</li>
+				<h3>July 13, 2022 - 08:22</h3>
+				<li>Created a new engine class: layer-engine</li>
+				<h3>July 13, 2022 - 10:03:13</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ext\new_allocator.h||In instantiation of 'void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = sf::Drawable; _Args = {const sf::Drawable&}; _Tp = sf::Drawable]':|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\alloc_traits.h|475|required from 'static void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = sf::Drawable; _Args = {const sf::Drawable&}; _Tp = sf::Drawable; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<sf::Drawable>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_vector.h|1079|required from 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = sf::Drawable; _Alloc = std::allocator<sf::Drawable>; std::vector<_Tp, _Alloc>::value_type = sf::Drawable]'|
+\Militia SFML\engine\layer-engine.cpp|5|required from here|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ext\new_allocator.h|136|error: invalid new-expression of abstract class type 'sf::Drawable'|
+C:\sfml\include\SFML\Graphics\Drawable.hpp|44|note:   because the following virtual functions are pure within 'sf::Drawable':|
+C:\sfml\include\SFML\Graphics\Drawable.hpp|69|note:     'virtual void sf::Drawable::draw(sf::RenderTarget&, sf::RenderStates) const'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_construct.h||In instantiation of 'void std::_Construct(_T1*, _Args&& ...) [with _T1 = sf::Drawable; _Args = {sf::Drawable}]':|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_uninitialized.h|83|required from 'static _ForwardIterator std::__uninitialized_copy<_TrivialValueTypes>::__uninit_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = std::move_iterator<sf::Drawable*>; _ForwardIterator = sf::Drawable*; bool _TrivialValueTypes = false]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_uninitialized.h|134|required from '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = std::move_iterator<sf::Drawable*>; _ForwardIterator = sf::Drawable*]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_uninitialized.h|289|required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = std::move_iterator<sf::Drawable*>; _ForwardIterator = sf::Drawable*; _Tp = sf::Drawable]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_uninitialized.h|311|required from '_ForwardIterator std::__uninitialized_move_if_noexcept_a(_InputIterator, _InputIterator, _ForwardIterator, _Allocator&) [with _InputIterator = sf::Drawable*; _ForwardIterator = sf::Drawable*; _Allocator = std::allocator<sf::Drawable>]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\vector.tcc|447|required from 'void std::vector<_Tp, _Alloc>::_M_realloc_insert(std::vector<_Tp, _Alloc>::iterator, _Args&& ...) [with _Args = {const sf::Drawable&}; _Tp = sf::Drawable; _Alloc = std::allocator<sf::Drawable>; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<sf::Drawable*, std::vector<sf::Drawable> >; typename std::_Vector_base<_Tp, _Alloc>::pointer = sf::Drawable*]'|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_vector.h|1085|required from 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = sf::Drawable; _Alloc = std::allocator<sf::Drawable>; std::vector<_Tp, _Alloc>::value_type = sf::Drawable]'|
+\Militia SFML\engine\layer-engine.cpp|5|required from here|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\stl_construct.h|75|error: invalid new-expression of abstract class type 'sf::Drawable'|
+||=== Build finished: 2 error(s), 12 warning(s) (0 minute(s), 18 second(s)) ===|
+</pre>
+				<h3>July 13, 2022 - 10:13:33</h3>
+				<li>Permanently deleted layer-engine.h and .cpp.</li>
 		</ul>
 	</body>
 </html>
