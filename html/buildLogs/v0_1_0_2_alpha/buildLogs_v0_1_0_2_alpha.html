@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 14, 2022 11:41:20</p>
+		<p>Updated as of July 14, 2022 16:00:59</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -674,7 +674,7 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 				<div class="imgDiv" id="info-797">
 					<img src="build797.png" alt="Build 797 Image."><br>
 				</div>
-			<h2>Build 798: phroton/feature-46/gui-layering -> dev (developer mode)</h2>
+			<h2>Build 798: phroton/feature-46/gui-layering (developer mode)</h2>
 				<h3>July 14, 2022 - 11:27:23</h3>
 				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
 \Militia SFML\common\levels.cpp||In member function 'virtual void Phroton::Levels::Draw(float)':|
@@ -691,6 +691,43 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 					<img src="build798_1.png" alt="First Build 798 Image."><br>
 					<img src="build798_2.png" alt="Second Build 798 Image."><br>
 					<img src="build798_3.png" alt="Third Build 798 Image."><br>
+				</div>
+			<h2>Build 799: phroton/feature-46/gui-layering (developer mode)</h2>
+				<h3>July 14, 2022 - 15:27:39</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::Update(float)':|
+\Militia SFML\common\gui.cpp|315|error: 'using element_type = struct Dzergero::GameEngine' {aka 'struct Dzergero::GameEngine'} has no member named 'states'; did you mean 'state'?|
+\Militia SFML\common\levels.cpp||In member function 'virtual void Phroton::Levels::Update(float)':|
+\Militia SFML\common\levels.cpp|20|error: 'using element_type = struct Dzergero::GameEngine' {aka 'struct Dzergero::GameEngine'} has no member named 'states'; did you mean 'state'?|
+||=== Build failed: 2 error(s), 0 warning(s) (0 minute(s), 30 second(s)) ===|
+</pre>
+				<h3>July 14, 2022 - 15:29:22</h3>
+				<li>Got several errors such as:</li>
+				<ul>
+					<li>\Militia SFML\common\levels.cpp|20|error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'Dzergero::stateRef' {aka 'std::unique_ptr<Dzergero::State>'})|</li>
+					<li>\Militia SFML\common\gui.cpp|315|error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'Dzergero::stateRef' {aka 'std::unique_ptr<Dzergero::State>'})|</li>
+					<li>\Militia SFML\common\gui.cpp|315|required from here|</li>
+					<li>C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|error: no type named 'type' in 'struct std::enable_if<false, std::basic_ostream<char>&>'|</li>
+					<li>\Militia SFML\common\levels.cpp|20|required from here|</li>
+					<li>C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\ostream|682|error: no type named 'type' in 'struct std::enable_if<false, std::basic_ostream<char>&>'|</li>
+				</ul>
+				<h3>July 14, 2022 - 15:36:32 / 15:37:00</h3>
+				<li>Removed debug info that displays <code>float dt</code> of GUI and Levels class.</li>
+				<li>Added debug info that displays address of the current state. It shows that only 1 state is being run, causing the inability to use layering of multiple states.</li>
+				<br><button onclick='showImage("info-799")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-799">
+					<img src="build799_1.png" alt="First Build 799 Image."><br>
+					<img src="build799_2.png" alt="Second Build 799 Image."><br>
+					<img src="build799_3.png" alt="Third Build 799 Image."><br>
+				</div>
+			<h2>Build 800: July 14, 2022 - 15:51:10 / 15:51:39 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li>Temporarily added the ability to press ESC on Levels class to go back to GUI Class.</li>
+				<li>Fixed an issue causing the game the freeze when entering Levels class.</li>
+				<br><button onclick='showImage("info-800")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-800">
+					<img src="build800_1.png" alt="First Build 800 Image."><br>
+					<img src="build800_2.png" alt="Second Build 800 Image."><br>
+					<img src="build800_3.png" alt="Third Build 800 Image."><br>
 				</div>
 		</ul>
 	</body>
