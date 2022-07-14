@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 13, 2022 19:00:50</p>
+		<p>Updated as of July 14, 2022 11:41:20</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -553,7 +553,7 @@ obj\main.o:main.cpp:(.rdata$.refptr._ZTV16CConsoleLoggerEx[.refptr._ZTV16CConsol
 \Militia SFML\common\pause.h|25|error: 'GUI' does not name a type; did you mean 'GUID'?|
 ||=== Build finished: 5 error(s), 0 warning(s) (0 minute(s), 18 second(s)) ===|
 </pre>
-				<h3>July 12, 2022 - 15:50 to </h3>
+				<h3>July 12, 2022 - 15:50 to 16:02</h3>
 				<li>Continued separating HarpzagotM1 and it's HUD by moving some code to GUI Class.</li>
 				<h3>July 12, 2022 - 15:53:43</h3>
 				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
@@ -597,7 +597,7 @@ obj\main.o:main.cpp:(.rdata$.refptr._ZTV16CConsoleLoggerEx[.refptr._ZTV16CConsol
 					<img src="build796_2.png" alt="Second Build 796 Image."><br>
 				</div>
 			<h2>Build 797: phroton/feature-46/gui-layering (developer mode)</h2>
-				<h3>July 13, 2022 - 08:22 to 9:00, 10:00 to </h3>
+				<h3>July 13, 2022 - 08:22 to 9:00, 10:00 to 12:00, 18:30 to 19:00</h3>
 				<li>Started working on HUD and Map layering.</li>
 				<h3>July 13, 2022 - 08:22</h3>
 				<li>Created a new engine class: layer-engine</li>
@@ -650,6 +650,48 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 \Militia SFML\common\gui.cpp|315|error: invalid use of 'Phroton::Levels::Levels'|
 ||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 16 second(s)) ===|
 </pre>
+				<h3>July 14, 2022 - 10:40 to </h3>
+				<li>Continued working on HUD and Map layering.</li>
+				<h3>July 14, 2022 - 10:40:44</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.h|69|error: 'Levels' does not name a type|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::Update(float)':|
+\Militia SFML\common\gui.cpp|315|error: invalid use of 'Phroton::Levels::Levels'|
+||=== Build finished: 2 error(s), 0 warning(s) (0 minute(s), 33 second(s)) ===|
+</pre>
+				<h3>July 14, 2022 - 10:44:52</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::Update(float)':|
+\Militia SFML\common\gui.cpp|315|error: invalid use of 'Phroton::Levels::Levels'|
+||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 33 second(s)) ===|
+</pre>
+				<h3>July 14, 2022 - 10:46:50 / 10:47:28</h3>
+				<li>Added Layers Class with two functionless functions: Run() and Draw().</li>
+				<li>Member function Run() runs when going to GUI class.</li>
+				<li>Game crashes when entering GUI Class and running Levels::Draw().</li>
+				<li>Process returns (0xC0000005).</li>
+				<br><button onclick='showImage("info-797")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-797">
+					<img src="build797.png" alt="Build 797 Image."><br>
+				</div>
+			<h2>Build 798: phroton/feature-46/gui-layering -> dev (developer mode)</h2>
+				<h3>July 14, 2022 - 11:27:23</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\levels.cpp||In member function 'virtual void Phroton::Levels::Draw(float)':|
+\Militia SFML\common\levels.cpp|25|error: 'class sf::RenderWindow' has no member named 'Draw'; did you mean 'draw'?|
+||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 39 second(s)) ===|
+</pre>
+				<h3>July 14, 2022 - 11:28:59 / 11:29:33</h3>
+				<li>Converted Levels class into an inherited class of State.h.</li>
+				<li>Made levels class run while setting <code>m_isReplacing</code> to false.</li>
+				<li>Game freezes when entering levels class.</li>
+				<li>Added more debug info to test if GUI class is still running after calling Levels class.</li>
+				<br><button onclick='showImage("info-798")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-798">
+					<img src="build798_1.png" alt="First Build 798 Image."><br>
+					<img src="build798_2.png" alt="Second Build 798 Image."><br>
+					<img src="build798_3.png" alt="Third Build 798 Image."><br>
+				</div>
 		</ul>
 	</body>
 </html>
