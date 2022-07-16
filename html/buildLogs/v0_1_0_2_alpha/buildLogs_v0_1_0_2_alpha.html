@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 14, 2022 16:00:59</p>
+		<p>Updated as of July 16, 2022 18:42:20</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -686,6 +686,7 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 				<li>Made levels class run while setting <code>m_isReplacing</code> to false.</li>
 				<li>Game freezes when entering levels class.</li>
 				<li>Added more debug info to test if GUI class is still running after calling Levels class.</li>
+				<li>Added sample text "Prototype Text" on Levels class, but the text does not show.</li>
 				<br><button onclick='showImage("info-798")'>Show Image</button><br><br>
 				<div class="imgDiv" id="info-798">
 					<img src="build798_1.png" alt="First Build 798 Image."><br>
@@ -723,11 +724,48 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 			<h2>Build 800: July 14, 2022 - 15:51:10 / 15:51:39 phroton/feature-46/gui-layering (developer mode)</h2>
 				<li>Temporarily added the ability to press ESC on Levels class to go back to GUI Class.</li>
 				<li>Fixed an issue causing the game the freeze when entering Levels class.</li>
+				<li>Changed the position of "Prototype text" of Levels class from 0, 0, to 100, 100.</li>
 				<br><button onclick='showImage("info-800")'>Show Image</button><br><br>
 				<div class="imgDiv" id="info-800">
 					<img src="build800_1.png" alt="First Build 800 Image."><br>
 					<img src="build800_2.png" alt="Second Build 800 Image."><br>
 					<img src="build800_3.png" alt="Third Build 800 Image."><br>
+				</div>
+			<h2>Build 801: July 15, 2022 - 17:04:44 / 17:05:13 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li>Added more debug info: "Pause Class"</li>
+				<li>Added more debug info: "Pause Class"</li>
+				<li>GUI Class is now called and added to the state engine after adding Levels class to the state engine.</li>
+				<li>It shows that Pause class has been added the the state engine, but Levels class doesn't pause and runs continuously.</li>
+				<li>Changed "Prototype text" to "Prototype TextPrototype TextPrototype TextPrototype TextPrototype Text" and changed it's origin from 0, 0 to 200, 200 and it's position form 100, 100 to 200, 200 but it does not display. It seems that the function Draw() does not run when running Levels class.</li>
+				<br><button onclick='showImage("info-801")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-801">
+					<img src="build801.png" alt="Build 801 Image."><br>
+				</div>
+			<h2>Build 802: July 16, 2022 - 17:35:22 / 17:36:17 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li><b>Developer Mode: </b>Moved several debug info to DEVELOPER MODE, and removed some of them.</li>
+				<li>Removed public inheritance of Dzergero::State from Levels class.</li>
+				<li>Re-added Run() and Draw() inside levels class.</li>
+				<li>Added float dt as a parameter for Levels::Run().</li>
+				<li>The game does not run Levels class anymore.</li>
+				<li>Pause button can now be used again.</li>
+				<br><button onclick='showImage("info-802")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-802">
+					<img src="build802_1.png" alt="First Build 802 Image."><br>
+					<img src="build802_2.png" alt="Second Build 802 Image."><br>
+				</div>
+			<h2>Build 803: July 16, 2022 - 18:19:10 / 18:20:08 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li>Called Levels::Draw() function in GUI::Draw(). but nothing happened.</li>
+				<br><button onclick='showImage("info-803")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-803">
+					<img src="build803.png" alt="Build 803 Image."><br>
+				</div>
+			<h2>Build 804: July 16, 2022 - 18:31:34 / 18:32:26 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li><b>Developer Mode: </b> Added more debug info that displays text when Levels::Run() and Levels::Draw() was called.</li>
+				<li>I noticed that the player texture only draws after clicking pause button.</li>
+				<br><button onclick='showImage("info-804")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-804">
+					<img src="build804_1.png" alt="First Build 804 Image."><br>
+					<img src="build804_2.png" alt="Second Build 804 Image."><br>
 				</div>
 		</ul>
 	</body>
