@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 16, 2022 18:42:20</p>
+		<p>Updated as of July 17, 2022 18:58:50</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -766,6 +766,28 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 				<div class="imgDiv" id="info-804">
 					<img src="build804_1.png" alt="First Build 804 Image."><br>
 					<img src="build804_2.png" alt="Second Build 804 Image."><br>
+				</div>
+			<h2>Build 805: July 17, 2022 - 17:55:52 / 17:56:23 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li>Successfully rendered player texture on Levels class while GUI class is running at the same time.</li>
+				<li>Prototype code for parachute animation is not working.</li>
+				<li>g_bNewSession is set to zero, thus no prototype parachute animation.</li>
+				<br><button onclick='showImage("info-805")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-805">
+					<img src="build805_1.png" alt="First Build 805 Image."><br>
+					<img src="build805_2.png" alt="Second Build 805 Image."><br>
+				</div>
+			<h2>Build 806: July 17, 2022 - 18:24:52 / 18:25:22 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li>1st attempt to fix prototype parachute animation.</li>
+				<li>Added Levels::Init(), called it on GUI::Init(), and placed a code to set g_bNewSession to true, but nothing happened.</li>
+				<li>Still no prototype parachute animation.</li>
+			<h2>Build 807: July 17, 2022 - 18:37:57 / 18:38:44 phroton/feature-46/gui-layering (developer mode)</h2>
+				<li>2nd attempt to fix prototype parachute animation.</li>
+				<li>Removed Levels::Init() and moved it's code to constructor of Levels class or Levels::Levels().</li>
+				<li>Prototype animation for parachute (player texture with number 18) is now back.</li>
+				<li>The state of the game will no longer reset after pressing "Continue" from pause menu.</li>
+				<br><button onclick='showImage("info-807")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-807">
+					<img src="build807.png" alt="Build 807 Image."><br>
 				</div>
 		</ul>
 	</body>
