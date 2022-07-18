@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 17, 2022 18:58:50</p>
+		<p>Updated as of July 18, 2022 18:59:20</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -780,7 +780,7 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 				<li>1st attempt to fix prototype parachute animation.</li>
 				<li>Added Levels::Init(), called it on GUI::Init(), and placed a code to set g_bNewSession to true, but nothing happened.</li>
 				<li>Still no prototype parachute animation.</li>
-			<h2>Build 807: July 17, 2022 - 18:37:57 / 18:38:44 phroton/feature-46/gui-layering (developer mode)</h2>
+			<h2>Build 807: July 17, 2022 - 18:37:57 / 18:38:44 phroton/feature-46/gui-layering -> dev (developer mode)</h2>
 				<li>2nd attempt to fix prototype parachute animation.</li>
 				<li>Removed Levels::Init() and moved it's code to constructor of Levels class or Levels::Levels().</li>
 				<li>Prototype animation for parachute (player texture with number 18) is now back.</li>
@@ -788,6 +788,46 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 				<br><button onclick='showImage("info-807")'>Show Image</button><br><br>
 				<div class="imgDiv" id="info-807">
 					<img src="build807.png" alt="Build 807 Image."><br>
+				</div>
+			<h2>Build 808: phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<h3>July 18, 2022 - 17:32:24</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\levels.cpp||In constructor 'Phroton::Levels::Levels(Dzergero::GameEngineRef)':|
+\Militia SFML\common\levels.cpp|30|error: switch quantity not an integer|
+\Militia SFML\common\levels.cpp|31|error: could not convert '1.10000002e+0f' from 'float' to '<type error>'|
+\Militia SFML\common\levels.cpp||In member function 'void Phroton::Levels::Run(float)':|
+\Militia SFML\common\levels.cpp|44|error: switch quantity not an integer|
+\Militia SFML\common\levels.cpp|45|error: could not convert '1.10000002e+0f' from 'float' to '<type error>'|
+||=== Build finished: 4 error(s), 0 warning(s) (0 minute(s), 36 second(s)) ===|
+</pre>
+				<h3>July 18, 2022 - 17:57:21</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\levels.cpp||In constructor 'Phroton::Levels::Levels(Dzergero::GameEngineRef)':|
+\Militia SFML\common\levels.cpp|27|error: 'g_nMaps' was not declared in this scope|
+\Militia SFML\common\levels.cpp|27|note: suggested alternative: 'g_nMap'|
+||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 22 second(s)) ===|
+</pre>
+				<h3>July 18, 2022 - 17:58:34</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\levels.h|35|error: 'HarpzagotM1' does not name a type|
+||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 36 second(s)) ===|
+</pre>
+				<h3>July 18, 2022 - 18:00:00 / 18:00:13</h3>
+				<li>Removed inheritance of HarpzagotM1 class from Dzergero::State.</li>
+				<li>Removed HarpzagotM1::HandleInput(), HarpzagotM1::Update(float dt), and HarpzagotM1::Draw(float dt).</li>
+				<li>Added HarpzagotM1::Run() and HarpzagotM1::Draw(). Moved the code from HarpzagotM1::Draw(float dt) to HarpzagotM1::Draw().</li>
+				<li>Called HarpzagotM1 class inside Levels class but the background did not display. It shows that g_nMap remains 0.</li>
+				<li>Added ERROR_005: 005_INVALID_MAP.</li>
+				<br><button onclick='showImage("info-808")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-808">
+					<img src="build808.png" alt="Build 808 Image."><br>
+				</div>
+			<h2>Build 809: July 18, 2022 - 18:27:53 / 18:28:24 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<li>Added associated values to enumeration of eMaps in game-data.h.</li>
+				<li>Value of g_nMap is now 1, but the background remains black.</li>
+				<br><button onclick='showImage("info-809")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-809">
+					<img src="build809.png" alt="Build 809 Image."><br>
 				</div>
 		</ul>
 	</body>
