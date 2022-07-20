@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 19, 2022 18:48:30</p>
+		<p>Updated as of July 20, 2022 11:48:47</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -833,6 +833,33 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 				<li>Added paamayim nekudotayim operator along with the name of enum for maps for it's contents after being used in a switch statement inside Levels class.</li>
 				<li>Eg: from <code>L1_M1</code> to <code>eMaps::L1_M1</code>.</li>
 				<li>The background of level 1 mission 1 didn't change at all.</li>
+				<li>The background only shows after clicking pause button.</li>
+				<br><button onclick='showImage("info-810")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-810">
+					<img src="build810_1.png" alt="First Build 809 Image."><br>
+					<img src="build810_2.png" alt="Second Build 809 Image."><br>
+				</div>
+			<h2>Build 811: July 20, 2022 - 11:11:55 / 11:13:12 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<li>window.display() is now called on HarpzagotM1::Draw(), but the screen is now flickering from levels/gui class and harpzagotm1 back and forth.</li>
+				<li>The flickering effect does not show properly on the video recording due to performance issues on the computer.</li>
+				<br><button onclick='showImage("info-811")'>Show Video</button><br><br>
+				<div class="imgDiv" id="info-811">
+					<video controls>
+						<source src="build811.mp4" type="video/mp4">
+					Unable to play build811.mp4: Your browser does not support video player.
+					</video>
+				</div>
+			<h2>Build 812: July 20, 2022 - 11:33:05 / 11:34:19 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<li>Disabled several debug info such as "Levels::Draw()", "Levels::Run()", and "GUI::Update()" thta floods debug console.</li>
+				<li>Layering of GUI, Levels, and Map now renders properly.</li>
+				<li>Prototype background of HarpzagotM1::Draw() now renders properly.</li>
+				<br><button onclick='showImage("info-812")'>Show Video</button><br><br>
+				<div class="imgDiv" id="info-812">
+					<video controls>
+						<source src="build812.mp4" type="video/mp4">
+					Unable to play build812.mp4: Your browser does not support video player.
+					</video>
+				</div>
 		</ul>
 	</body>
 </html>

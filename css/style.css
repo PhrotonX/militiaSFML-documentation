@@ -18,7 +18,7 @@ dd {font-family: "Arial";}
 dt {font-family: "Arial";}
 a {font-family: "Arial";}
 
-img {
+img{
 	width: 85%;
 	height: auto;
 }
@@ -60,3 +60,7 @@ button {margin-left: 30px;}
   border-top: none;
 }
 
+video{
+	width: 75%;
+	height: auto;
+}
