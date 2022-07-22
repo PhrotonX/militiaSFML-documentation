@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 21, 2022 17:25:25</p>
+		<p>Updated as of July 22, 2022 16:53:10</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -863,8 +863,8 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 			<h2>Build 813 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
 				<h3>July 21, 2022 - 17:24:25</h3>
 				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
-<a href="#">\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'void Phroton::HarpzagotM1::Draw(float)':|
-<a href="#">\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|30|error: no matching function for call to 'sf::RenderWindow::draw(Phroton::Entities*&)'|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp||In member function 'void Phroton::HarpzagotM1::Draw(float)':|
+\Militia SFML\maps\harpzagot\harpzagot-m1.cpp|30|error: no matching function for call to 'sf::RenderWindow::draw(Phroton::Entities*&)'|
 C:\sfml\include\SFML\Graphics\RenderTarget.hpp|237|note: candidate: 'void sf::RenderTarget::draw(const sf::Drawable&, const sf::RenderStates&)'|
 C:\sfml\include\SFML\Graphics\RenderTarget.hpp|237|note:   no known conversion for argument 1 from 'Phroton::Entities*' to 'const sf::Drawable&'|
 C:\sfml\include\SFML\Graphics\RenderTarget.hpp|248|note: candidate: 'void sf::RenderTarget::draw(const sf::Vertex*, std::size_t, sf::PrimitiveType, const sf::RenderStates&)'|
@@ -875,6 +875,18 @@ C:\sfml\include\SFML\Graphics\RenderTarget.hpp|269|note: candidate: 'void sf::Re
 C:\sfml\include\SFML\Graphics\RenderTarget.hpp|269|note:   candidate expects 4 arguments, 1 provided|
 ||=== Build finished: 1 error(s), 0 warning(s) (1 minute(s), 7 second(s)) ===|
 </pre>
+				<h3>July 22, 2022 - (July 21, 2022 - 17:24:02) / 16:01:07</h3>
+				<li>Moved drawing player texture from Levels class to HarpzagotM1 class, but it no longer draws.</li>
+				<br><button onclick='showImage("info-813")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-813">
+					<img src="build813.png" alt="Build 813 Image."><br>
+				</div>
+			<h2>Build 814: July 22, 2022 - 16:14:59 / 16:15:42 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<li>Reverted drawing of player texture by drawing it back in Levels class instead of HarpzagotM1.</li>
+				<br><button onclick='showImage("info-814")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-814">
+					<img src="build814.png" alt="Build 814 Image."><br>
+				</div>
 		</ul>
 	</body>
 </html>
