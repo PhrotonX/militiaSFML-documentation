@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 27, 2022 17:23:49</p>
+		<p>Updated as of July 28, 2022 19:40:30</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -896,6 +896,98 @@ C:\sfml\include\SFML\Graphics\RenderTarget.hpp|269|note:   candidate expects 4 a
 				<br><button onclick='showImage("info-815")'>Show Image</button><br><br>
 				<div class="imgDiv" id="info-815">
 					<img src="build815.png" alt="Build 815 Image."><br>
+				</div>
+			<h2>Build 816: phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<h3>July 28, 2022 - 18:33:29</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.cpp||In member function 'void Phroton::GUI::GameHUD(uint_fast8_t)':|
+\Militia SFML\common\gui.cpp|46|error: no matching function for call to 'Phroton::GUI::SetText(sf::Text&, const char [13], uint_fast16_t&, int, const sf::Color&, const sf::Color&, float, float, float, float, double)'|
+\Militia SFML\common\gui.h|45|note: candidate: 'void Phroton::GUI::SetText(sf::Text&, const string&, std::__cxx11::string, uint_fast8_t, const sf::Color&, const sf::Color&, float, float, float, float, float)'|
+\Militia SFML\common\gui.h|45|note:   no known conversion for argument 3 from 'uint_fast16_t' {aka 'short unsigned int'} to 'std::__cxx11::string' {aka 'std::__cxx11::basic_string<char>'}|
+\Militia SFML\common\gui.h|46|note: candidate: 'void Phroton::GUI::SetText(sf::Text, std::__cxx11::string, std::__cxx11::string, uint_fast8_t, const sf::Color&, const sf::Color&, float, const Vector2f&, const Vector2f&)'|
+\Militia SFML\common\gui.h|46|note:   candidate expects 9 arguments, 11 provided|
+\Militia SFML\common\gui.cpp|47|error: no matching function for call to 'Phroton::GUI::SetText(sf::Text&, const char [13], float&, int, const sf::Color&, const sf::Color&, float, float, float, double, double)'|
+\Militia SFML\common\gui.h|45|note: candidate: 'void Phroton::GUI::SetText(sf::Text&, const string&, std::__cxx11::string, uint_fast8_t, const sf::Color&, const sf::Color&, float, float, float, float, float)'|
+\Militia SFML\common\gui.h|45|note:   no known conversion for argument 3 from 'float' to 'std::__cxx11::string' {aka 'std::__cxx11::basic_string<char>'}|
+\Militia SFML\common\gui.h|46|note: candidate: 'void Phroton::GUI::SetText(sf::Text, std::__cxx11::string, std::__cxx11::string, uint_fast8_t, const sf::Color&, const sf::Color&, float, const Vector2f&, const Vector2f&)'|
+\Militia SFML\common\gui.h|46|note:   candidate expects 9 arguments, 11 provided|
+\Militia SFML\common\gui.cpp|48|error: no matching function for call to 'Phroton::GUI::SetText(sf::Text&, const char [13], uint_fast32_t&, int, const sf::Color&, const sf::Color&, float, float, float, float, double)'|
+\Militia SFML\common\gui.h|45|note: candidate: 'void Phroton::GUI::SetText(sf::Text&, const string&, std::__cxx11::string, uint_fast8_t, const sf::Color&, const sf::Color&, float, float, float, float, float)'|
+\Militia SFML\common\gui.h|45|note:   no known conversion for argument 3 from 'uint_fast32_t' {aka 'unsigned int'} to 'std::__cxx11::string' {aka 'std::__cxx11::basic_string<char>'}|
+\Militia SFML\common\gui.h|46|note: candidate: 'void Phroton::GUI::SetText(sf::Text, std::__cxx11::string, std::__cxx11::string, uint_fast8_t, const sf::Color&, const sf::Color&, float, const Vector2f&, const Vector2f&)'|
+\Militia SFML\common\gui.h|46|note:   candidate expects 9 arguments, 11 provided|
+\Militia SFML\common\gui.cpp||In member function 'virtual void Phroton::GUI::HandleInput()':|
+\Militia SFML\common\gui.cpp|309|error: no match for 'operator==' (operand types are 'sf::Event::MouseButtonEvent' and 'sf::Mouse::Button')|
+C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\guiddef.h|175|note: candidate: 'bool operator==(const GUID&, const GUID&)'|
+C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include\guiddef.h|175|note:   no known conversion for argument 1 from 'sf::Event::MouseButtonEvent' to 'const GUID&' {aka 'const _GUID&'}|
+C:\sfml\include\SFML\System\Time.hpp|161|note: candidate: 'bool sf::operator==(sf::Time, sf::Time)'|
+C:\sfml\include\SFML\System\Time.hpp|161|note:   no known conversion for argument 1 from 'sf::Event::MouseButtonEvent' to 'sf::Time'|
+C:\sfml\include\SFML\System\String.hpp|540|note: candidate: 'bool sf::operator==(const sf::String&, const sf::String&)'|
+C:\sfml\include\SFML\System\String.hpp|540|note:   no known conversion for argument 1 from 'sf::Event::MouseButtonEvent' to 'const sf::String&'|
+C:\sfml\include\SFML\System\Vector2.inl|150|note: candidate: 'template<class T> bool sf::operator==(const sf::Vector2<T>&, const sf::Vector2<T>&)'|
+C:\sfml\include\SFML\System\Vector2.inl|150|note:   template argument deduction/substitution failed:|
+\Militia SFML\common\gui.cpp|309|note:   'sf::Event::MouseButtonEvent' is not derived from 'const sf::Vector2<T>'|
+C:\sfml\include\SFML\System\Vector3.inl|157|note: candidate: 'template<class T> bool sf::operator==(const sf::Vector3<T>&, const sf::Vector3<T>&)'|
+C:\sfml\include\SFML\System\Vector3.inl|157|note:   template argument deduction/substitution failed:|
+\Militia SFML\common\gui.cpp|309|note:   'sf::Event::MouseButtonEvent' is not derived from 'const sf::Vector3<T>'|
+C:\sfml\include\SFML\Window\VideoMode.hpp|117|note: candidate: 'bool sf::operator==(const sf::VideoMode&, const sf::VideoMode&)'|
+C:\sfml\include\SFML\Window\VideoMode.hpp|117|note:   no known conversion for argument 1 from 'sf::Event::MouseButtonEvent' to 'const sf::VideoMode&'|
+C:\sfml\include\SFML\Graphics\BlendMode.hpp|133|note: candidate: 'bool sf::operator==(const sf::BlendMode&, const sf::BlendMode&)'|
+C:\sfml\include\SFML\Graphics\BlendMode.hpp|133|note:   no known conversion for argument 1 from 'sf::Event::MouseButtonEvent' to 'const sf::BlendMode&'|
+C:\sfml\include\SFML\Graphics\Rect.inl|147|note: candidate: 'template<class T> bool sf::operator==(const sf::Rect<T>&, const sf::Rect<T>&)'|
+C:\sfml\include\SFML\Graphics\Rect.inl|147|note:   template argument deduction/substitution failed:|
+\Militia SFML\common\gui.cpp|309|note:   'sf::Event::MouseButtonEvent' is not derived from 'const sf::Rect<T>'|
+C:\sfml\include\SFML\Graphics\Transform.hpp|419|note: candidate: 'bool sf::operator==(const sf::Transform&, const sf::Transform&)'|
+C:\sfml\include\SFML\Graphics\Transform.hpp|419|note:   no known conversion for argument 1 from 'sf::Event::MouseButtonEvent' to 'const sf::Transform&'|
+C:\sfml\include\SFML\Graphics\Color.hpp|114|note: candidate: 'bool sf::operator==(const sf::Color&, const sf::Color&)'|
+C:\sfml\include\SFML\Graphics\Color.hpp|114|note:   no known conversion for argument 1 from 'sf::Event::MouseButtonEvent' to 'const sf::Color&'|
+||=== Build finished: 4 error(s), 0 warning(s) (0 minute(s), 32 second(s)) ===|
+</pre>
+				<h3>July 28, 2022 - 18:36:16</h3>
+				<li>Same error as above</li>
+				<h3>July 28, 2022 - 18:47:17</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.cpp||In member function 'void Phroton::GUI::GameHUD(uint_fast8_t)':|
+\Militia SFML\common\gui.cpp|256|error: 'to_string' was not declared in this scope|
+\Militia SFML\common\gui.cpp|256|note: suggested alternative:|
+C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\bits\basic_string.h|6466|note:   'std::__cxx11::to_string'|
+||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 25 second(s)) ===|
+</pre>
+				<h3>July 28, 2022 - 18:47:06 / 18:49:09</h3>
+				<li>Clicking anywhere in HarpzagotM1 class (including pause button) will now decrease the ammunition.</li>
+				<li>Tried displaying string of score, ammunition, and health but it did not display at all.</li>
+				<li>The amount of ammunition is incorrect because the player object is not public.</li>
+				<br><button onclick='showImage("info-816")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-816">
+					<img src="build816.png" alt="Build 816 Image."><br>
+				</div>
+			<h2>Build 817: phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<h3>July 28, 2022 - 19:04:22</h3>
+				<pre>||=== Build: default in militia2d (compiler: GNU GCC Compiler) ===|
+\Militia SFML\common\gui.cpp||In constructor 'Phroton::GUI::GUI(Dzergero::GameEngineRef)':|
+\Militia SFML\common\gui.cpp|8|error: '_player' was not declared in this scope|
+||=== Build finished: 1 error(s), 0 warning(s) (0 minute(s), 29 second(s)) ===|
+</pre>
+				<h3>July 28, 2022 - 19:05:45 / 19:06:12</h3>
+				<li>The game now sets the ammunition to 100 properly after making player object public.</li>
+				<li>Ammunition turns into 65535 after negative value has reached, which is a bug.</li>
+				<li>The ammunition does not decrease when the the house is still while holding it, the mouse has to be moved while holding to decrease the ammunition.</li>
+				<li>The player does not have a shooting animation yet.</li>
+				<li>Ammunition resets to 100 after exiting the level and returning back because saving is not implemented.</li>
+				<li>Ammunition value display on debug console per click on HarpzagotM1.</li>
+				<br><button onclick='showImage("info-817")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-817">
+					<img src="build817_1.png" alt="First Build 817 Image."><br>
+					<img src="build817_2.png" alt="Second Build 817 Image."><br>
+				</div>
+			<h2>Build 818: July 28, 2022 - 19:31:02 / 19:31:30 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<li>Moved position of ammunition text from 0, 720 / 0.15 to 1280 / 40, 720 / 40.</li>
+				<li>Moved position of health text from 1280 / 0.5, 720 / 0.25 to 1280 / 2, 720 / 10.</li>
+				<li>Moved position of score text from 0, 720 / 0.1 to 1280 / 40, 720 / 20.</li>
+				<li>Tried improving controls to prevent recognizing input while holding ang dragging the left mouse button, but failed.</li>
+				<br><button onclick='showImage("info-818")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-818">
+					<img src="build818.png" alt="Build 818 Image."><br>
 				</div>
 		</ul>
 	</body>
