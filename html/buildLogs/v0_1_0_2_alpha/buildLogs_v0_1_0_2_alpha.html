@@ -12,7 +12,7 @@
 		<hr>
 		<pre><a href="../../index.html">Home</a>	<a href="../../versionHistory/v0_1_0_2_alpha/v0_1_0_2.html">Back to Changelog</a></pre>
 		<hr>
-		<p>Updated as of July 29, 2022 17:25:10</p>
+		<p>Updated as of July 29, 2022 19:27:29</p>
 		<button onclick='showAllImages("imgDiv")'>Show all images</button>
 		<ul>
 			<h2>Build 786: phroton/feature/list-map-input-engine</h2>
@@ -1007,6 +1007,21 @@ C:\Program Files\CodeBlocks\MinGW\lib\gcc\x86_64-w64-mingw32\8.1.0\include\c++\b
 						<source src="build820.mp4" type="video/mp4">
 					Unable to play build820.mp4: Your browser does not support video player.
 					</video>
+				</div>
+			<h2>Build 821: July 29, 2022 - 19:00:28 / 19:00:55 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<li>FPS Counter no longer move itself to the right, but the value displayed is incorrect.</li>
+				<li>Changed position of ammunition status from 1280 / 40, 720 / 40 to 1280 / 80, 720 / 40.</li>
+				<li>Changed position of health status from 1280 / 2, 720 / 10 to 1280 / 1.9, 720 / 10.</li>
+				<li>Changed position of score status from 1280 / 40, 720 / 20 to 1280 / 80, 720 / 20.</li>
+				<li>Changed position of FPS counter from 0 + 5, 720 / 1.035 to 1280 / 80, 720 / 1.035.</li>
+			<h2>Build 822: July 29, 2022 - 19:17:32 / 19:18:01 phroton/feature-v0.1.0.2/level-engine-setup (developer mode)</h2>
+				<li>Ammunition no longer turn into 65535 after value of 0.</li>
+				<li>Changed the way how FPS is calculated, but it is still incorrect.</li>
+				<li>Health is no longer displayed as a float value.</li>
+				<li>Changed health data type from float to uint_fast8_t.</li>
+				<br><button onclick='showImage("info-822")'>Show Image</button><br><br>
+				<div class="imgDiv" id="info-822">
+					<img src="build822.png" alt="Build 822 Image."><br>
 				</div>
 		</ul>
 	</body>
